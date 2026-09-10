@@ -7,28 +7,27 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
+
     <div id="app">  
-        <contador></contador>
-        <contador></contador>
-        <contador></contador>
+        <cont contador="contador"> </cont>
     </div>
+
     <script>
-        Vue.component('contador', {
+        Vue.component('cont', {
             data: function() {
-                return {
+                return{
                     contador: 0
                 }
             },
             methods: {
-                add() {
+                somaUm(){
                     this.contador++
                 }
             },
-            template: `
+            template:` 
                 <div>
-                    <span>{{ contador }}</span>
-                    <button @click="add">+1</button>
-                    <button @click="contador--">-1</button>
+                    <p>{{contador}}</p>
+                    <button @click="somaUm">+1</button>
                 </div>
             `
         })

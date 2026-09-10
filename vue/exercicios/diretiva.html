@@ -12,8 +12,8 @@
         <div v-inverter="nome"></div>
     </div>
     <script>
-        Vue.directive('inverter', {
-            componentUpdated(el, binding) {
+        Vue.directive('inverter',{
+            componentUpdated(el, binding){
                 const invertido = binding.value.split('')
                     .reverse().join('')
                 el.innerHTML = invertido
